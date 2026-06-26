@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 
@@ -21,3 +22,10 @@ def save_json(data: list, output_path: Path):
             indent=4,
             default=str,
         )
+
+
+def clean_filename(name: str) -> str:
+    """
+    Make a string safe for use as a file or folder name.
+    """
+    return re.sub(r'[<>:"/\\|?*]', "_", name.strip())
