@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_telegram_messages
+    description: "Cleaned staging model for Telegram messages."
+
+    columns:
+
+      - name: message_id
+        description: "Telegram message ID."
+        tests:
+          - unique
+          - not_null
+
+      - name: channel_name
+        description: "Telegram channel name."
+        tests:
+          - not_null
+
+      - name: message_date
+        description: "Date the message was posted."
+
+      - name: message_text
+        description: "Cleaned message text."
+
+      - name: views
+        description: "Number of views."
+
+      - name: forwards
+        description: "Forward count."
+
+      - name: has_image
+        description: "Whether the message has an image."
