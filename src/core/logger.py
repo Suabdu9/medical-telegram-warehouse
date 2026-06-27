@@ -46,6 +46,14 @@ LOGGING_CONFIG = {
         },
     },
     "loggers": {
+        "database": {
+            "handlers": [
+                "console",
+                "general_file",
+            ],
+            "level": LOG_LEVEL.upper(),
+            "propagate": False,
+        },
         "scraper": {
             "handlers": [
                 "console",
