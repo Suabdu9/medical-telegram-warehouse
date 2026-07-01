@@ -14,3 +14,4 @@ uvicorn
 ultralytics
 dagster
 dagster-webserver
+opencv-python
